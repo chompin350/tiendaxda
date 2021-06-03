@@ -1,1 +1,25 @@
-//This file you will create your rule of typographys inside of the project
+
+.texto-vertical-2 {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-family: $font-relawey;
+    font-weight: $font-bold;
+    font-size: $font-xxx-large;
+}
+
+h1{
+    font-size: $font-xx-large;
+    font-family: $font-oldstand;
+    font-weight: $font-bold;
+    text-align: left;
+    color: $smoky-black;
+}
+
+p {
+    font-size: $font-large;
+    font-family: $font-oldstand;
+    font-weight: $font-bold;
+    text-align: left;
+    color: $granite-gray;
+    line-height: 1.5rem;
+}

@@ -1,1 +1,82 @@
-//This file is for create your style with relation on space of navbar
+.navigation{
+    position: relative;
+    border: 1px solid black;
+}
+.navigation__logo{
+    position: absolute;
+    top: 0.9em;
+    left: 1.5em;
+    font-family: $font-oldstand;
+    font-size: $font-large;
+    font-weight: $font-bold;
+    @include point_df-break($break_tablet){
+        top:1em;
+        left: 1.5em;
+    }
+}
+
+.collapsible{
+    text-align: right;
+    label{
+        display: block;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-right: 1.5em;
+        font-size: 1.8rem;
+        @include point_df-break($break_tablet){
+            display: none;
+        }
+    }
+}
+
+#menu {
+    display: none;
+}
+
+input:checked ~ .navigation__container { 
+    max-height: 100%;
+}
+
+.navigation__container{
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    @include point_df-break($break_tablet){
+        max-height: 100%;
+        padding: 0.5em 1.5em 0.5em 0;
+        overflow: visible;
+    }
+}
+
+.navigation__item{
+    list-style: none;
+    a {
+        display: block;
+        text-align: left;
+        padding: 0.5em;
+        font-family: $font-relawey;
+        font-size: $font-medium;
+        font-weight: $font-bold;
+        color: $smoky-black;
+        text-decoration: none;
+        @include point_df-break($break_tablet){
+            padding: 0.5em 1em;
+            // font-size: $font-medium;
+            // font-weight: $font-boldr;
+        }
+
+        &:hover{
+            color: $quick-silver;
+        }
+    }
+
+}
+
+@include point_df-break($break_tablet){
+ .navigation__list{
+     display: flex;
+     justify-content: flex-end;
+     margin: inherit;
+     padding: inherit;
+ }   
+}

@@ -1,12 +1,171 @@
-@charset "UTF-8";
 /* CARGA MANIFIESTO */
 /* abstracts */
 /* vendors */
 /* base */
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.texto-vertical-2 {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  text-align: left;
+  color: #0c0910;
+}
+
+p {
+  font-size: 18px;
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  text-align: left;
+  color: #646266;
+  line-height: 1.5rem;
+}
+
 /* layout */
+.navigation {
+  position: relative;
+  border: 1px solid black;
+}
+
+.navigation__logo {
+  position: absolute;
+  top: 0.9em;
+  left: 1.5em;
+  font-family: "Old Standard TT", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .navigation__logo {
+    top: 1em;
+    left: 1.5em;
+  }
+}
+
+.collapsible {
+  text-align: right;
+}
+.collapsible label {
+  display: block;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 1.5em;
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 768px) {
+  .collapsible label {
+    display: none;
+  }
+}
+
+#menu {
+  display: none;
+}
+
+input:checked ~ .navigation__container {
+  max-height: 100%;
+}
+
+.navigation__container {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .navigation__container {
+    max-height: 100%;
+    padding: 0.5em 1.5em 0.5em 0;
+    overflow: visible;
+  }
+}
+
+.navigation__item {
+  list-style: none;
+}
+.navigation__item a {
+  display: block;
+  text-align: left;
+  padding: 0.5em;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0c0910;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .navigation__item a {
+    padding: 0.5em 1em;
+  }
+}
+.navigation__item a:hover {
+  color: #a6a5a8;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    display: flex;
+    justify-content: flex-end;
+    margin: inherit;
+    padding: inherit;
+  }
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  justify-content: center;
+  width: 100%;
+}
+.main__item {
+  border: 1px solid black;
+  width: 100%;
+  height: auto;
+}
+.main__item__imagen {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+}
+.main__item__margen {
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* components */
 .btn__primary {
   border: 2px solid #0c0910;
+  background-color: #fff;
+  padding: 0.63rem 0.94rem;
+  font-weight: 700;
+  color: #0c0910;
 }
 .btn--normal {
   padding: 1rem 2rem;
@@ -21,142 +180,6 @@
 }
 .btn:focus {
   border: 1px solid #a6a5a8;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  margin: 0.75em;
-  background: url(../../images/imagen1.png);
-  background-size: cover;
-}
-
-/* Advanced Checkbox Hack */
-body {
-  -webkit-animation: bugfix infinite 1s;
-}
-
-@-webkit-keyframes bugfix {
-  from {
-    padding: 0;
-  }
-  to {
-    padding: 0;
-  }
-}
-input[type=checkbox] {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-
-label {
-  display: none;
-  cursor: pointer;
-  user-select: none;
-}
-
-/* background for li / select */
-/* custom-dropdown */
-nav[role=custom-dropdown] {
-  position: relative;
-  width: 100%;
-}
-nav[role=custom-dropdown] a,
-nav[role=custom-dropdown] label {
-  color: #ccc;
-  text-decoration: none;
-  font: 1.4em sans-serif;
-  transition: color 0.3s ease-in-out;
-}
-nav[role=custom-dropdown] ul {
-  padding: 0;
-  margin: 0 auto;
-  width: 100%;
-  list-style: none;
-}
-nav[role=custom-dropdown] ul > li {
-  float: left;
-  padding: 0.55em 0.55em;
-  width: 19%;
-  background-image: url(../../images/imagen1.png);
-  text-align: center;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
-  transition-property: box-shadow, color;
-  box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, 0.35);
-  cursor: pointer;
-}
-nav[role=custom-dropdown] ul > li:hover {
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, 0.35), inset 0 0 0 2em rgba(0, 0, 0, 0.3);
-}
-nav[role=custom-dropdown] ul > li:hover > a {
-  color: #fff;
-}
-
-/* small screens */
-@media screen and (max-width: 44em) {
-  html,
-body {
-    margin: 0;
-  }
-
-  nav[role=custom-dropdown] ul {
-    display: none;
-    height: 100%;
-  }
-  nav[role=custom-dropdown] label {
-    position: relative;
-    display: block;
-    width: 100%;
-    min-height: 2.25em;
-    padding: 0.45em;
-    font-size: 1.1em;
-    margin: 0;
-    border: 0.15em solid rgba(60, 60, 60, 0.2);
-    background-image: url(../../images/imagen1.png);
-  }
-  nav[role=custom-dropdown] label:after {
-    position: absolute;
-    right: 0.25em;
-    top: 0;
-    content: "≡";
-    font-size: 1.8em;
-  }
-  nav[role=custom-dropdown] input[type=checkbox]:checked ~ label:after {
-    color: #222;
-  }
-  nav[role=custom-dropdown] input[type=checkbox]:checked ~ ul {
-    display: block;
-  }
-  nav[role=custom-dropdown] input[type=checkbox]:checked ~ ul > li {
-    width: 100%;
-    opacity: 0.8;
-    text-align: left;
-  }
-  nav[role=custom-dropdown] input[type=checkbox]:checked ~ ul > li:after {
-    position: absolute;
-    right: 0.25em;
-    content: "›";
-    font: bold 1.4em sans-serif;
-  }
-}
-.texto-vertical-2 {
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 50px;
 }
 
 .input-tex {
