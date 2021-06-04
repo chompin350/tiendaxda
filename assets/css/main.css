@@ -207,10 +207,10 @@ header {
 @media screen and (min-width: 992px) {
   header {
     grid-area: area-1;
-    height: auto;
+    height: 78vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
   }
 }
 
