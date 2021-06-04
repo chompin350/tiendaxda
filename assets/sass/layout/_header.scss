@@ -8,9 +8,10 @@ header{
     background-size: cover;
     background-position:top;
     
+    
     @include point_df-break($break_tablet){
         height: 76vh;
-        background-position: center;
+        background-position: 0 -8rem;
      
     }
 
