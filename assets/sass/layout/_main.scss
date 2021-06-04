@@ -1,39 +1,22 @@
-
-
-.main{
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    justify-content: center;
-    width: 100%;
+.descripcion{
+    margin: 0 auto;
+    padding: 2rem;
 
     &__item{
-        
-        border: 1px solid black;
         width: 100%;
-        height: auto;
-
-        &__imagen{
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: auto;
-        }
-
-        &__margen{
-            width: 80%;
-            margin: 0 auto;
-        }
-    }
-    
-    @include point_df-break($break_desktop) {
-        grid-template-columns: repeat(2, 1fr);
 
     }
-
-    @include point_df-break($break_large) {
-        grid-template-columns: repeat(2, 1fr);
-
+    @include point_df-break($break_desktop){
+        grid-area: area-2;
+        padding-top: 4rem;
+        
     }
+
+    @include point_df-break($break_tablet){
+        width: 80%;
+        
+    }
+
 }
+
 

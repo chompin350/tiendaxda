@@ -16,19 +16,24 @@
   'base/base',
   'base/typography';
 
+  /* components */
+  @import
+  'components/buttons',
+  'components/inputs',
+  'components/grid';
+
+
   /* layout */
 @import
   'layout/navbar',
   'layout/header',
   'layout/footer',
   'layout/main',
-  'layout/pagination';
+  'layout/pagination',
+  'layout/contacto',
+  'layout/newsletter';
+  
 
-
-  /* components */
-@import
-  'components/buttons',
-  'components/inputs';
   
 /* pages */
 // @import

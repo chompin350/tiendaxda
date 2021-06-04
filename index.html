@@ -15,10 +15,11 @@
 </head>
 <body>
    <!-- Header -->
-    <header class="header"> <!-- Navigation -->
+    <section class="navegacion"> <!-- Navigation -->
         <nav class="navigation">
-            <div class="navigation__logo">XDA</div>
-            <div class="collapsible col-xs-12"> 
+            <a href="#" class="navigation__logo">XDA</a>
+            <!-- <img class="size_imagen" src="./assets/images/icono.png" alt="logo"></a> -->
+            <div class="collapsible"> 
                 <input type="checkbox" id="menu">
                 <label for="menu">
                     <i class="fas fa-bars"></i>
@@ -41,45 +42,38 @@
                 </div>
             </div> 
         </nav>
-    </header>
-
-    <section class="main">
-        <div class="main__item">
-            <div>
-                <img src="assets/images/imagen1.png" alt="imagen principal" class="main__item__imagen">
-            </div>
-        </div>
-        <div class="main__item">
-            <div class="main__item__margen">
-                <h1>LOREM IPSUM AD VALOREM</h1>
-           </div>
-            <div class="main__item__margen">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla reiciendis minus quaerat molestiae atque dolores animi, alias ab doloremque in, eveniet earum facilis, at quia eaque iure velit non. Natus!</p>
-            </div>
-            <div class="main__item__margen">
-                <button class="btn btn__primary">Ir a tienda</button>
-            </div>
-
-            <div class="main__item__margen">
-                <div class="item_form">
-                        TEXTO
-                </div>
-                <div class="text_vertical">
-                    Suscribir
-                </div>
-            </div>
-        </div>
-        <div class="main__item">X</div>
-        <div class="main__item">x</div>
-        <div class="main__item">x</div>
-        <div class="main__item">x</div>
-        <div class="main__item">x</div>
-        <div class="main__item">x</div>
-        <div class="main__item">x</div>
-        <div class="main__item">x</div>
-        <div class="main__item">x</div>
     </section>
 
+    <section class="container-grid">
+
+        <header>
+            <!-- Contenedor de imagen principal -->
+        </header>
+
+        <section class="descripcion">
+            
+            <div class="descripcion__item">
+                <h1>LOREM IPSUM AD VALOREM</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla reiciendis minus quaerat molestiae atque dolores animi, alias ab doloremque in, eveniet earum facilis, at quia eaque iure velit non. Natus!</p>
+                <button class="btn btn__primary">Ir a tienda</button>
+            </div>
+        </section>
+
+    
+        <section class="newletter">
+            <div class="newletter__form">
+                <h3>Newsletter</h3>
+                <h4>Correo Electrónico</h4>
+                <input type="text" placeholder="ingresa tu correo electrónico">
+            </div>
+            <div class="newletter__vertical">
+                Suscribir
+            </div>    
+        </section>
+    </section>
+    <section class="footer"></section>
+
+    <!-- CDN para ver en indicar CSS faltante en otros navegadores -->
     <script src="./assets/js/modernizr-custom.js"></script>
 </body>
 </html>

@@ -1,22 +1,27 @@
 .navigation{
     position: relative;
-    border: 1px solid black;
+    display: inline-flex;
+    width: 100%;
 }
 .navigation__logo{
-    position: absolute;
-    top: 0.9em;
-    left: 1.5em;
+    position: relative;
     font-family: $font-oldstand;
+    background-color: $smoky-black;
+    color:$white;
     font-size: $font-large;
     font-weight: $font-bold;
-    @include point_df-break($break_tablet){
-        top:1em;
-        left: 1.5em;
-    }
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
 }
 
 .collapsible{
     text-align: right;
+    margin-left: auto;
     label{
         display: block;
         padding-top: 0.5em;
@@ -61,8 +66,6 @@ input:checked ~ .navigation__container {
         text-decoration: none;
         @include point_df-break($break_tablet){
             padding: 0.5em 1em;
-            // font-size: $font-medium;
-            // font-weight: $font-boldr;
         }
 
         &:hover{
@@ -73,10 +76,11 @@ input:checked ~ .navigation__container {
 }
 
 @include point_df-break($break_tablet){
- .navigation__list{
-     display: flex;
-     justify-content: flex-end;
-     margin: inherit;
-     padding: inherit;
- }   
+    .navigation__list{
+        display: flex;
+        justify-content: flex-end;
+        margin: inherit;
+        padding: inherit;
+    }   
 }
+
