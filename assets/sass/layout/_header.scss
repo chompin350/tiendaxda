@@ -17,7 +17,7 @@ header{
 
     @include point_df-break($break_desktop){
         grid-area: area-1;
-        height: 63vh;
+        height: auto;
         background-repeat: no-repeat;
         background-size: cover;
         background-position:center;
