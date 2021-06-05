@@ -190,27 +190,26 @@ input:checked ~ .navigation__container {
 }
 header {
   width: 100%;
-  background-position: top;
-  height: 34vh;
+  height: 20vh;
   overflow: hidden;
   background-image: url(../images/imagen1.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center;
 }
 @media screen and (min-width: 731px) {
   header {
-    height: 40vh;
-    background-position: 0 -8rem;
+    height: 38vh;
+    background-position: center;
   }
 }
 @media screen and (min-width: 992px) {
   header {
     grid-area: area-1;
-    height: 78vh;
+    height: 63vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position: center;
   }
 }
 

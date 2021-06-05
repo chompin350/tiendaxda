@@ -1,26 +1,26 @@
 header{
     width: 100%;
-    background-position: top;
-    height: 34vh;
+    height: 20vh;
     overflow: hidden;
     background-image: url(../images/imagen1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position:top;
+    background-position:center;
     
     
     @include point_df-break($break_tablet){
-        height: 40vh;
-        background-position: 0 -8rem;
+        height: 38vh;
+        background-position:center;
+
      
     }
 
     @include point_df-break($break_desktop){
         grid-area: area-1;
-        height: 78vh;
+        height: 63vh;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: top;
+        background-position:center;
     }
 
 }
